@@ -5,18 +5,30 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'bit';
+  src: url("../fonts/32Bits.TTF");
+}
 /* =======================================================
 *
 * 	Template Style 
 *	Edit this section
 *
 * ======================================================= */
+html
+{
+  font-family: 'grd_grotesk_mediumregular';
+  cursor: url(../images/big_mouse.png),auto;
+  overflow-x: hidden;
+    
+}
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.5);
+  cursor: url(../images/big_mouse.png),auto;
   /*overflow: hidden;*/
 
 }
@@ -31,14 +43,17 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  cursor: url(../images/pointer.png),auto;
 }
 a:hover, a:active, a:focus {
   color: #da1212;
   outline: none;
+  cursor: url(../images/pointer.png),auto;
 }
 
 p {
   margin-bottom: 1.5em;
+  color: #545454;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -116,12 +131,15 @@ figure {
   }
 }
 #fh5co-aside #fh5co-logo {
-  text-align: center;
+  text-align: left;
+  margin-left: 17px;
+  z-index: 99999;
 }
 #fh5co-aside #fh5co-main-menu ul {
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding: 0;
+  padding-left: 10px;
+  font-family: "bit", Times, serif;
 }
 @media screen and (max-width: 768px) {
   #fh5co-aside #fh5co-main-menu ul {
@@ -134,11 +152,11 @@ figure {
   list-style: none;
 }
 #fh5co-aside #fh5co-main-menu ul li a {
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
   letter-spacing: .1em;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 700;
   position: relative;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -146,7 +164,7 @@ figure {
   padding: 10px 10px;
   text-align: left;
   letter-spacing: .2em;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "bit", Arial, sans-serif;
 }
 #fh5co-aside #fh5co-main-menu ul li a:after {
   content: "";
@@ -170,6 +188,7 @@ figure {
 }
 #fh5co-aside #fh5co-main-menu ul li a:hover {
   text-decoration: none;
+  cursor: url(../images/pointer.png),auto;
   /*color: black;*/
 }
 #fh5co-aside #fh5co-main-menu ul li a:hover:after {
@@ -179,6 +198,7 @@ figure {
   -ms-transform: scaleX(1);
   -o-transform: scaleX(1);
   transform: scaleX(1);
+  cursor: url(../images/pointer.png),auto;
 }
 #fh5co-aside #fh5co-main-menu ul li.fh5co-active a {
   color: #e22561;
@@ -192,10 +212,12 @@ figure {
   transform: scaleX(1);
 }
 #fh5co-aside .fh5co-footer {
+  font-family: "bit";
   position: absolute;
   bottom: 16px;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
+  margin-left: 20px;
   width: 100%;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.6);
@@ -228,6 +250,7 @@ figure {
   text-decoration: none;
   outline: none;
   color: #da1212;
+  cursor: url(../images/pointer.png),auto;
 }
 
 #fh5co-main {
@@ -237,7 +260,7 @@ figure {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1080px) {
   #fh5co-main {
     width: 70%;
   }
@@ -251,7 +274,7 @@ figure {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding: 4em 0;
+  padding: 6em 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-main .fh5co-narrow-content {
@@ -284,6 +307,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 
 .work-item {
+    font-family: "bit";
   margin-top: 40px;
   margin-bottom: 30px;
 }
@@ -291,11 +315,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .roll-item {
   margin-top: 12px;
   margin-bottom: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
   cursor: pointer;
 }
 .work-item a {
+  font-family: "bit";
   border: none;
   text-align: center;
 }
@@ -308,6 +333,8 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   transition: 0.5s;
 }
 .work-item a h3 {
+    font-family: "bit";
+    font-weight:bolder;
   font-size: 16px;
   color: #000;
   margin-bottom: 10px;
@@ -319,10 +346,11 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 .work-item a:hover, .work-item a:active, .work-item a:focus {
   text-decoration: none;
-  cursor: pointer;
+  cursor: url(../images/pointer.png),auto;
 }
 .work-item a:hover img, .work-item a:active img, .work-item a:focus img {
   border: 10px solid #000;
+  cursor: url(../images/pointer.png),auto;
   /*background: rgba(0,0,0,0.8);*/
 }
 
@@ -344,6 +372,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .work-pagination a:hover {
   color: #da1212;
   text-decoration: none;
+  cursor: url(../images/pointer.png),auto;
 }
 @media screen and (max-width: 480px) {
   .work-pagination span {
@@ -565,11 +594,13 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 .fh5co-social li a:hover {
   color: #da1212;
+  cursor: url(../images/pointer.png),auto;
 }
 .fh5co-social li a:hover, .fh5co-social li a:active, .fh5co-social li a:focus {
   outline: none;
   text-decoration: none;
   color: #da1212;
+  cursor: url(../images/pointer.png),auto;
 }
 
 #map {
@@ -726,6 +757,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .owl-carousel .owl-controls .owl-nav .owl-next:hover,
 .owl-carousel-posts .owl-controls .owl-nav .owl-next:hover {
   margin-right: -10px;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .owl-carousel .owl-controls .owl-nav .owl-prev,
@@ -735,6 +767,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .owl-carousel .owl-controls .owl-nav .owl-prev:hover,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev:hover {
   margin-left: -10px;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next {
@@ -820,12 +853,14 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .owl-theme .owl-dots .owl-dot span:hover {
   background: none;
   border: 3px solid #da1212;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: transparent;
   height: 10px;
   border: 2px solid #fff;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn {
@@ -855,6 +890,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn:hover, .btn:active, .btn:focus {
   box-shadow: none !important;
   outline: none !important;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn-primary {
@@ -865,6 +901,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #ec1919 !important;
   border-color: #ec1919 !important;
+  cursor: url(../images/pointer.png),auto;
 }
 .btn-primary.btn-outline {
   background: transparent;
@@ -874,6 +911,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
   background: #da1212;
   color: #fff;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn-success {
@@ -884,6 +922,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-success:hover, .btn-success:focus, .btn-success:active {
   background: #4cae4c !important;
   border-color: #4cae4c !important;
+  cursor: url(../images/pointer.png),auto;
 }
 .btn-success.btn-outline {
   background: transparent;
@@ -893,6 +932,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
   background: #5cb85c;
   color: #fff;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn-info {
@@ -903,6 +943,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-info:hover, .btn-info:focus, .btn-info:active {
   background: #46b8da !important;
   border-color: #46b8da !important;
+  cursor: url(../images/pointer.png),auto;
 }
 .btn-info.btn-outline {
   background: transparent;
@@ -912,6 +953,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-info.btn-outline:hover, .btn-info.btn-outline:focus, .btn-info.btn-outline:active {
   background: #5bc0de;
   color: #fff;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn-warning {
@@ -922,6 +964,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
   background: #eea236 !important;
   border-color: #eea236 !important;
+  cursor: url(../images/pointer.png),auto;
 }
 .btn-warning.btn-outline {
   background: transparent;
@@ -931,6 +974,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-warning.btn-outline:hover, .btn-warning.btn-outline:focus, .btn-warning.btn-outline:active {
   background: #f0ad4e;
   color: #fff;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn-danger {
@@ -941,6 +985,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active {
   background: #d43f3a !important;
   border-color: #d43f3a !important;
+  cursor: url(../images/pointer.png),auto;
 }
 .btn-danger.btn-outline {
   background: transparent;
@@ -950,6 +995,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .btn-danger.btn-outline:hover, .btn-danger.btn-outline:focus, .btn-danger.btn-outline:active {
   background: #d9534f;
   color: #fff;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .btn-outline {
@@ -962,6 +1008,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active {
   box-shadow: none;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .form-control {
@@ -1002,6 +1049,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
   outline: none;
   border-bottom: none !important;
+  cursor: url(../images/pointer.png),auto;
 }
 .fh5co-nav-toggle i {
   position: relative;
@@ -1052,10 +1100,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .fh5co-nav-toggle:hover i::before {
   top: -10px;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .fh5co-nav-toggle:hover i::after {
   bottom: -10px;
+  cursor: url(../images/pointer.png),auto;
 }
 
 .fh5co-nav-toggle.active i {
@@ -1162,11 +1212,13 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   color: #e22561;
   width: 100%;
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  cursor: url(../images/pointer.png),auto;
 }
 
 #fh5co-aside #fh5co-main-menu ul li a:hover:after {
   background: transparent;
   width: 100%;
   transition: 0s;
+  cursor: url(../images/pointer.png),auto;
 }
 /*# sourceMappingURL=style.css.map */

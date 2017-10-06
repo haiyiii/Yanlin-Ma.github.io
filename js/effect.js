@@ -1,6 +1,4 @@
 var x, y;
-var clothTexture;
-clothTexture = THREE.ImageUtils.loadTexture( 'images/text2.jpg' );
         document.onmousemove = function(e){
             x = e.pageX;
             y = e.pageY;
@@ -134,7 +132,7 @@ if(!DEBUG){
 
                 // cloth material
 
-                
+                var clothTexture = THREE.ImageUtils.loadTexture( 'images/text4.jpg' );
                 clothTexture.anisotropy = 16;
 
 
@@ -202,7 +200,6 @@ if(!DEBUG){
             }
 
             function animate() {
-                console.log(clothTexture);
                 requestAnimationFrame( animate );
                 world.step(dt);
                 var t = world.time;
