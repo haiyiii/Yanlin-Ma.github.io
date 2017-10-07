@@ -9,8 +9,8 @@ var x, y;
 
             var clothMass = 1;  // 1 kg in total
             var clothSize = 1.5; // 1 meter
-            var Nx = 30;
-            var Ny = 23;
+            var Nx = 26;
+            var Ny = 20;
             var mass = clothMass / Nx*Ny;
 
             var restDistance = clothSize/Nx;
