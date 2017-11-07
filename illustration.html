@@ -12,6 +12,143 @@
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FreeHTML5.co" />
+        
+        <style>
+            .top {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px 0;
+  text-align: center; }
+
+.galleryItem {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  border: none;
+  padding: 0;
+  display: inline-block;
+/*  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);*/
+/*  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);*/
+            }
+
+.galleryItem img {
+  width: 200px;
+  height: 250px;
+            border: none;}
+
+.caption {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+    border: none;
+  z-index: 2; }
+
+.caption::before {
+  content: attr(data-title);
+  width: 200px;
+  height: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  background-color: rgba(255,255,255,0.3);
+  font: bold 1.2em 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+/*
+.caption::after {
+  content: attr(data-description);
+  width: 250px;
+  height: 0;
+  position: absolute;
+  bottom: -0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(34,34,34,0.5);
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+*/
+
+/*
+.caption:hover::before {
+  opacity: 1;
+  height: 25px; }
+*/
+
+/*
+.caption:hover::after {
+  opacity: 1;
+  bottom: 0;
+  height: 65px; }
+*/
+
+/* lightbox */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+    border: none;
+  background: rgba(0,0,0,0.85);
+}
+
+.lightbox a { 
+  color: #fff;
+  text-decoration: none; 
+}
+
+/*
+.lightbox img {
+  max-height: 85%;
+  max-width: 85%;
+}
+*/
+
+.lightbox:target {
+  display: table;
+}
+
+.lightbox .image {
+  display: table-cell;
+    border: none;
+  vertical-align: middle; }
+
+.lightbox .image img {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
+
+.next, .prev, .close { display: block; position: fixed; }
+
+.close { width: 5000px; height: 5000px; overflow: hidden; top: 0; left: 0; z-index: 5; cursor: default; }
+
+.next, .prev { width: 100px; height: 25px; top: 50%; z-index: 10; opacity: 0.7; font-size: 2em; line-height: 25px; text-shadow: 0px 0px 15px rgba(0, 0, 0, 1); }
+
+.prev { left: 10px; text-align: left; }
+
+.prev::after { content: '\2039'; }
+	
+.next { right: 10px; text-align: right; }
+
+.next::before { content: '\203A'; }
+        </style>
 
 
 
@@ -46,14 +183,13 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="images/444.jpg"></a></h1>
+			<h1 id="fh5co-logo"><a href="index.html"><img src="images/logo2.jpg"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li style="text-indent:-65px"><a href="web.html">web</a></li>
-					<li><a href="installation.html">installation</a></li>
-					<li class="fh5co-active"><a href="illustration.html">illustration</a></li>
-					<li><a href="cameraroll.html">camera roll</a></li>
-					<li style="text-indent:-50px"><a href="about.html">about</a></li>
+					<li ><a href="web.html">web</a></li>
+					<li ><a href="installation.html">installation</a></li>
+                    <li class="fh5co-active"><a href="illustration.html">illustration</a></li>
+					<li ><a href="about.html">contact</a></li>
 				</ul>
 			</nav>
 			<div class="fh5co-footer">
@@ -66,72 +202,209 @@
 		<div id="fh5co-main">
 
 			<div class="fh5co-narrow-content">
-				<!-- <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Installation</h2> -->
+				<!-- <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Web</h2> -->
 				<div class="row animate-box" data-animate-effect="fadeInLeft">
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="https://yanlin-ma.github.io/window98-synthesizer.github.io/" target="_blank">
-							<img src="images/installation_1.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Wind</h3>
-							<!-- <p>window98-synthesizer</p> -->
-						</a>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_2.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Gravity #1</h3>
-							<!-- <p>Web, Packaging</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_3.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Gravity #2</h3>
-							<!-- <p>Branding, Web</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-md-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_4.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Gravity #3</h3>
-							<!-- <p>Logo, Branding, Web</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_5.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Gravity #4</h3>
-							<!-- <p>Web, Packaging, Branding</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-md-block visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_6.jpg" alt="oops" class="img-responsive">
-							<p style="font-weight: normal;">Chairman</p>
-							<!-- <p>Web, Packaging, Branding</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-md-block visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_7.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Close at Hand</h3>
-							<!-- <p>Web, Packaging, Branding</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-md-block visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="">
-							<img src="images/installation_8.jpg" alt="oops" class="img-responsive">
-							<h3 class="fh5co-work-title">Rain</h3>
-							<!-- <p>Web, Packaging, Branding</p> -->
-						</a>
-					</div>
-					<div class="clearfix visible-md-block visible-sm-block"></div>
-					
+                    <ul class="top">
+  <li class="galleryItem">
+    <a class="caption" href="#1">
+      <img src="https://c1.staticflickr.com/5/4438/37148152176_2cca770a20_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#2">
+      <img src="https://c1.staticflickr.com/5/4574/26469960149_ae5dbc492e_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#3">
+      <img src="https://c1.staticflickr.com/5/4481/37535075444_78be14bf7d_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#4">
+      <img src="https://c1.staticflickr.com/5/4431/37148148876_1f27166533_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#5">
+      <img src="https://c1.staticflickr.com/5/4377/36941831180_ec9458f502_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#6">
+      <img src="https://c1.staticflickr.com/5/4406/36941575550_6dd55aed80_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#7">
+      <img src="https://c1.staticflickr.com/5/4410/37148151626_d97e59a5b1_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#8">
+      <img src="https://c1.staticflickr.com/5/4358/37148151046_0417d8c9e6_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#9">
+      <img src="https://c1.staticflickr.com/5/4569/37535075154_628c563732_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#10">
+      <img src="https://c1.staticflickr.com/5/4423/36526191953_c4e0a5c682_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#11">
+      <img src="https://c1.staticflickr.com/5/4354/37148149656_e5d4bf8cf7_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#12">
+      <img src="https://c1.staticflickr.com/5/4467/38213898242_eb8db75185_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#13">
+      <img src="https://c1.staticflickr.com/5/4412/37364188591_a901bac6da_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#14">
+      <img src="https://c1.staticflickr.com/5/4529/38213899342_650df7eb51_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+  <li class="galleryItem">
+    <a class="caption" href="#15">
+      <img src="https://c1.staticflickr.com/5/4446/38217702152_71300a4e20_c.jpg" alt="Landscape image">
+    </a>
+  </li>
+</ul>
+    
+<!-- lightbox -->
+
+<div class="lightbox" id="1">
+   <div class="image">
+       <img src="https://c1.staticflickr.com/5/4438/37148152176_2cca770a20_c.jpg">
+          <a href="#6" class="prev"></a>
+          <a href="#" class="close"></a>
+          <a href="#2" class="next"></a>
+   </div>
+</div>
+<div class="lightbox" id="2">
+    <div class="image">
+         <img src="https://c1.staticflickr.com/5/4574/26469960149_ae5dbc492e_c.jpg">
+             <a href="#1" class="prev"></a>
+             <a href="#" class="close"></a>
+             <a href="#3" class="next"></a>
+        </div>
+    </div>
+	<div class="lightbox" id="3">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4481/37535075444_78be14bf7d_c.jpg">
+                <a href="#2" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#4" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="4">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4431/37148148876_1f27166533_c.jpg">
+                <a href="#3" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#5" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="5">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4377/36941831180_ec9458f502_c.jpg">
+                <a href="#4" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#6" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="6">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4406/36941575550_6dd55aed80_c.jpg">
+                <a href="#5" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#1" class="next"></a>
+       </div>
+   </div>
+<div class="lightbox" id="7">
+   <div class="image">
+       <img src="https://c1.staticflickr.com/5/4410/37148151626_d97e59a5b1_c.jpg">
+          <a href="#6" class="prev"></a>
+          <a href="#" class="close"></a>
+          <a href="#2" class="next"></a>
+   </div>
+</div>
+<div class="lightbox" id="8">
+    <div class="image">
+         <img src="https://c1.staticflickr.com/5/4358/37148151046_0417d8c9e6_c.jpg">
+             <a href="#1" class="prev"></a>
+             <a href="#" class="close"></a>
+             <a href="#3" class="next"></a>
+        </div>
+    </div>
+	<div class="lightbox" id="9">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4569/37535075154_628c563732_c.jpg">
+                <a href="#2" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#4" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="10">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4423/36526191953_c4e0a5c682_c.jpg">
+                <a href="#3" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#5" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="11">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4354/37148149656_e5d4bf8cf7_c.jpg">
+                <a href="#4" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#6" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="12">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4467/38213898242_eb8db75185_c.jpg">
+                <a href="#5" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#1" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="13">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4412/37364188591_a901bac6da_c.jpg">
+                <a href="#4" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#6" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="14">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4529/38213899342_650df7eb51_c.jpg">
+                <a href="#5" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#1" class="next"></a>
+       </div>
+   </div>
+	<div class="lightbox" id="115">
+    	<div class="image">
+            <img src="https://c1.staticflickr.com/5/4446/38217702152_71300a4e20_c.jpg">
+                <a href="#5" class="prev"></a>
+                <a href="#" class="close"></a>
+                <a href="#1" class="next"></a>
+       </div>
+   </div>
+
 				</div>
 			</div>
 		</div>
