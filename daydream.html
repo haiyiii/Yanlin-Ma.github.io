@@ -52,7 +52,7 @@ label 				 {
   font-size:18px;
   font-weight:normal;
   position:absolute;
-  pointer-events:none;
+  pointer-events:visible;
   left:5px;
   top:10px;
   transition:0.2s ease all; 
@@ -103,6 +103,12 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   opacity:0.5;
 }
 
+input{
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+}
+
 /* active state */
 input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
@@ -131,12 +137,31 @@ input:focus ~ .highlight {
 	  <div class="container">
 	  	  <h2>Email me for Password</h2>
 		  <div class="group">      
-	      <input type="text" required>
+	      <input type="text" required id="myinput">
 	      <span class="highlight"></span>
 	      <span class="bar"></span>
-	      <label>Password</label>
+	      <label id="label">Password</label>
 	      </div>
       </div>
 	</body>
+
+	<script language="JavaScript" type="text/javascript">
+  function addListener(element,e,fn){
+    if(element.addEventListener){
+       element.addEventListener(e,fn,false);
+     } else {
+       element.attachEvent("on" + e,fn);
+     }
+  }
+  var myinput = document.getElementById("myinput");
+  addListener(myinput,"click",function(){
+  	myinput.value = "";
+  document.getElementById('label').remove();
+
+  })
+  addListener(myinput,"blur",function(){
+  myinput.value = "Password";
+  })
+</script>
 </html>
 
