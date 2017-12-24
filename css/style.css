@@ -34,7 +34,7 @@ body {
 }
 @media screen and (max-width: 992px) {
   body {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 figure {
-  margin-bottom: 2.5em;
+  margin-bottom: 10px;
   float: left;
   width: 100%;
 }
@@ -153,9 +153,9 @@ figure {
 }
 #fh5co-aside #fh5co-main-menu ul li a {
   color: black;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   letter-spacing: .1em;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   position: relative;
   -webkit-transition: 0.3s;
@@ -335,12 +335,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .work-item a h3 {
     font-family: "bit";
     font-weight:bolder;
-  font-size: 16px;
+  font-size: 13px;
   color: #000;
   margin-bottom: 10px;
 }
 .work-item a p {
-  font-size: 18px;
+  font-size: 13px;
   color: #7f7f7f;
   margin-bottom: 0;
 }
