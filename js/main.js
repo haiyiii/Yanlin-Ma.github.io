@@ -2,6 +2,23 @@
 	
 	'use strict';
 
+	document.onmousedown=right;
+
+	console.log(navigator.appName);
+
+	function right(e) {
+if (navigator.appName == 'Netscape' &&
+(e.which == 3 || e.which == 2)){
+	console.log("ddd");
+return false;
+}
+else if (navigator.appName == 'Microsoft Internet Explorer' &&
+(event.button == 2 || event.button == 3)) {
+return false;
+}
+return true;
+}
+
 
 	var isMobile = {
 		Android: function() {
@@ -25,7 +42,7 @@
 	};
 
 	var fullHeight = function() {
-		console.log("Hello你好 嘿嘿嘿");
+		console.log("Hello你好");
 		console.log("www.yanlinma.com");
 
 		// if ( !isMobile.any() ) {
