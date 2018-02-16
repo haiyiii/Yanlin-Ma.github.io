@@ -11,7 +11,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -20,7 +20,7 @@ html
   font-family: 'grd_grotesk_mediumregular';
   cursor: url(../images/big_mouse.png),auto;
   overflow-x: hidden;
-    
+
 }
 body {
   font-family: "roboto", Arial, sans-serif;
