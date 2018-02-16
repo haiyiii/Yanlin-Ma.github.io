@@ -1,0 +1,29 @@
+{
+  "name": "yanlin-ma.github.io",
+  "version": "1.0.0",
+  "description": "yanlinma portfolio",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yanlin-Ma/Yanlin-Ma.github.io.git"
+  },
+  "keywords": [
+    "yanlinma",
+    "portfolio",
+    "nyu",
+    "itp"
+  ],
+  "author": "yanlinma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yanlin-Ma/Yanlin-Ma.github.io/issues"
+  },
+  "homepage": "https://github.com/Yanlin-Ma/Yanlin-Ma.github.io#readme"
+}
